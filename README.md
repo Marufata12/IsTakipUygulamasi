@@ -1,53 +1,39 @@
-Kitap Satış Sistemi Kullanım Kılavuzu
-Bu kılavuz, PyQt5 ve SQLite veritabanı kullanılarak geliştirilmiş basit bir kitap satış sistemi uygulamasının kullanımını adım adım açıklamaktadır.
+Enstrüman Dükkanı Uygulaması Kullanım Kılavuzu
+Bu kullanım kılavuzu, Enstrüman Dükkanı uygulamasının nasıl kullanılacağına dair adım adım talimatlar içermektedir. Uygulamayı başarıyla kullanabilmek için aşağıdaki adımları takip edebilirsiniz:
 
-1. Uygulamanın Başlatılması
-Uygulamayı çalıştırmak için anasayfa.py dosyasını çalıştırın.
-Ana pencere uygulaması başladığında, kitap satış sistemi arayüzü görüntülenecektir.
-2. Ana Pencere
-Ana pencere, kitap satış sistemi başlangıç noktasıdır. Burada kullanıcılar aşağıdaki işlevlere erişebilirler:
+1. Enstrüman Dükkanı Uygulamasını Başlatma
+Uygulamayı başlatmak için main.py dosyasını çalıştırın. Bu, Ana Sayfa penceresini açacaktır.
 
-2.1. Kitap Listesi Görüntüleme
-Kitap Bilgileri Görüntüleme:
-Menü çubuğundan Satılan Kitaplar seçeneğini tıklayarak satılan kitapların listesini görüntüleyebilirsiniz.
-2.2. Kitap Satın Alma
-Kitap Satın Alma Formu Açma:
-Menü çubuğundan Kitap Satın Al seçeneğini tıklayarak yeni bir kitap satın alma formunu açabilirsiniz.
-Açılan formda ID, Kitap Adı, Ad Soyad, Adres ve Fiyat bilgilerini girerek kitap satın alabilirsiniz.
-2.3. Kitap Düzenleme
-Kitap Düzenleme Formu Açma:
-Menü çubuğundan Kitap Düzenle seçeneğini tıklayarak mevcut kitapların düzenlendiği formu açabilirsiniz.
-Açılan formda kitap ID'si girilerek kitap bilgilerini güncelleyebilir veya silme işlemi yapabilirsiniz.
-2.4. Kitap Arama
-Kitap Arama İşlemi:
-Arama kutusuna kitap adı veya müşteri adı girerek Ara butonuna tıklayabilirsiniz.
-Arama sonuçları tabloda listelenecek ve ilgili bilgilere erişim sağlanabilecektir.
-3. Kitap Bilgi Gösterme Sayfası
-Bu sayfa, satılan kitapların detaylarını görüntülemek için kullanılır.
+bash
+Copy code
+python main.py
+2. Enstrüman Ekleme
+Ana Sayfa'da, "Enstrüman Ekle" butonuna tıklayarak yeni bir enstrüman ekleyebilirsiniz. Açılan pencerede:
 
-Satılan Kitapları Listeleme:
-Ana pencereden Satılan Kitaplar seçeneğine tıklayarak bu sayfaya erişebilirsiniz.
-Kitapların ID, Kitap Adı, Satın Alan Kişi, Adres ve Ödeme bilgileri tabloda listelenir.
-4. Kitap Düzenleme Sayfası
-Bu sayfa, mevcut kitapları düzenlemek veya silmek için kullanılır.
+"Enstrüman Adı": Yeni enstrümanın adını girin.
+"Fiyat": Enstrümanın fiyatını girin.
+"Stok Sayısı": Enstrümanın mevcut stok sayısını belirtin.
+"Satış Sayısı": Enstrümanın daha önce gerçekleşmiş satış sayısını girin.
+Tüm bilgileri doldurduktan sonra "Kaydet" düğmesine basarak enstrümanı kaydedin. Eğer girdiğiniz bilgiler geçerli değilse, uyarı mesajlarıyla bilgilendirileceksiniz.
 
-Kitap Ekleme:
-Ekle butonuna tıklayarak yeni bir kitap ekleyebilirsiniz.
-Gerekli alanları doldurarak ve Ekle butonuna basarak yeni kitap kaydedilir.
-Kitap Güncelleme:
-Mevcut kitabın ID bilgisini girerek Güncelle butonuna tıklayarak kitap bilgilerini güncelleyebilirsiniz.
-Kitap Silme:
-Mevcut kitabın ID bilgisini girerek Sil butonuna tıklayarak kitabı veritabanından silebilirsiniz.
-5. Kitap Satın Alma Sayfası
-Bu sayfa, kullanıcıların kitap satın alma işlemlerini gerçekleştirebileceği bir form sunar.
+3. Enstrümanları Görüntüleme ve İşlem Yapma
+Ana Sayfa'da, mevcut enstrümanları listeleyen bir tablo bulunmaktadır. Bu tablodaki herhangi bir satıra tıkladığınızda, ilgili enstrümanın bilgilerini görmek ve düzenlemek için "İŞLEM" butonuna tıklayabilirsiniz.
 
-Kitap Satın Alma:
-ID, Kitap Adı, Ad Soyad, Adres ve Fiyat bilgilerini girerek Satın Al butonuna tıklayarak kitap satın alabilirsiniz.
+"İŞLEM" butonuna tıkladığınızda, seçili enstrümanın bilgileri "İşlem Sayfası"nda görüntülenir.
+"Güncelle" düğmesini kullanarak enstrüman bilgilerini güncelleyebilirsiniz.
+"Sil" düğmesini kullanarak enstrümanı veritabanından silebilirsiniz.
+4. Müşteri Bilgilerini Görüntüleme
+Ana Sayfa'da, "Müşteri Bilgileri" butonuna tıklayarak müşteri bilgilerini görüntüleyebilirsiniz. Açılan pencerede:
+
+"Arama": Müşteri adına göre arama yapabilirsiniz. Arama kutusuna müşteri adını girerek tabloda filtreleme yapabilirsiniz.
+Müşteri tablosunda, müşteri adı, soyadı, aldığı enstrüman, adedi, toplam tutarı ve iletişim bilgileri listelenir.
 
 
-Kaynak Kodları:
-anasayfa.py
-kitap_bilgi_sayfa.py
-kitap_duzenle_.py
-kitap_satin_al.py
+
+
+KAYNAK KODLARININ BULUNDUĞU SAYFALAR:
+main.py
+ykayit.py
+islem.py
+mbilgi.py
 veritabani.py
